@@ -1,0 +1,46 @@
+<!--
+  Generated template for the CalculatorPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Calculadora</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<!-- CalcularParaRecibir -->
+	<div>
+		<h1>Calcular para recibir</h1>
+		<ion-item>
+			<ion-label>Para recibir:</ion-label>
+			<ion-input type="text" [(ngModel)]="calcParaRecibir.recibir" [value]="calcParaRecibir.recibir" (ionChange)="calcularRecibo()"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label>La comisión es:</ion-label>
+			<ion-input type="text" [(ngModel)]="calcParaRecibir.comision" [value]="calcParaRecibir.comision"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label>Se deben enviar:</ion-label>
+			<ion-input type="text" [(ngModel)]="calcParaRecibir.enviar" [value]="calcParaRecibir.enviar"></ion-input>
+		</ion-item>
+	</div>
+	<!-- CalcularParaEnviar -->
+	<div>
+		<h1>Calcular para enviar</h1>
+		<ion-item>
+			<ion-label>Si envias:</ion-label>
+			<ion-input type="text" [(ngModel)]="calcParaEnviar.enviar" [value]="calcParaEnviar.enviar" (ionChange)="calcularEnvio()"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label>La comisión es:</ion-label>
+			<ion-input type="text" [(ngModel)]="calcParaEnviar.comision" [value]="calcParaEnviar.comision"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label>Se reciben:</ion-label>
+			<ion-input type="text" [(ngModel)]="calcParaEnviar.recibir" [value]="calcParaEnviar.recibir"></ion-input>
+		</ion-item>
+	</div>
+</ion-content>
