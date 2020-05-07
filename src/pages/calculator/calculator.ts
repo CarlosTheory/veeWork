@@ -46,10 +46,10 @@ export class CalculatorPage {
 
   calcularRecibo(){
 	console.log("calcularRecibo()");
+	var r = (100 - this.porcentaje)/100;
 	this.calcParaRecibir.recibir = Number(this.calcParaRecibir.recibir);
-	this.calcParaRecibir.comision = (((this.porcentaje * this.calcParaRecibir.recibir)/100) + this.adicional).toFixed(2);
-	this.calcParaRecibir.enviar = (parseFloat(this.calcParaRecibir.recibir) + parseFloat(this.calcParaRecibir.comision)).toFixed(2);
-
+	this.calcParaRecibir.enviar = ((parseFloat(this.calcParaRecibir.recibir) + this .adicional)/r).toFixed(2);
+	this.calcParaRecibir.comision = (parseFloat(this.calcParaRecibir.enviar) - parseFloat(this.calcParaRecibir.recibir)).toFixed(2);
   }
 
 }
