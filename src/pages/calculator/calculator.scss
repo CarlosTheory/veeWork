@@ -1,3 +1,22 @@
 page-calculator {
+  	.usd {
+	    color: #a2e352 !important;
+	    margin: 25px -10px -33px 0 !important;
+	    background-color: transparent;
+	    font-size: 20px;
+	    padding: 0px 7px 12px 0px;
+	}
+
+	.input-buttons{
+		margin: 0px -10px -25px 0 !important;
+	}
+
+	.input-button {
+		background-color: #1A9BD7!important;
+		font-size: 20px;
+		padding: 10px;
+		width: 50px;
+		border-radius: none;
+	}
 
 }

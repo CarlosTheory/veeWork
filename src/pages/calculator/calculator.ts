@@ -17,13 +17,13 @@ export class CalculatorPage {
 	public porcentaje:number = 5.40;
 	public adicional:number = 0.30;
 	private calcParaRecibir:any = {
-		recibir: 0,
+		recibir: "",
 		enviar: 0,
 		comision:0
 	}
 	private calcParaEnviar:any = {
 		recibir: 0,
-		enviar: 0,
+		enviar: "",
 		comision:0
 	}
   constructor(public navCtrl: NavController, public navParams: NavParams) {
@@ -50,6 +50,10 @@ export class CalculatorPage {
 	this.calcParaRecibir.recibir = Number(this.calcParaRecibir.recibir);
 	this.calcParaRecibir.enviar = ((parseFloat(this.calcParaRecibir.recibir) + this .adicional)/r).toFixed(2);
 	this.calcParaRecibir.comision = (parseFloat(this.calcParaRecibir.enviar) - parseFloat(this.calcParaRecibir.recibir)).toFixed(2);
+  }
+
+  hola(){
+  	console.log("hola");
   }
 
 }

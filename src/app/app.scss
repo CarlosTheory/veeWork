@@ -14,3 +14,18 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+
+@import '../fonts/fonts';
+
+	.veeWork-title {
+		font-family: 'Nunito Sans SemiBold';
+		font-style: normal;
+		color: #3D63A8!important;
+	}
+
+	.tab-button-text {
+		font-family: 'Nunito Sans Bold';
+		font-style: normal;
+		color: #3D63A8!important;
+	}
