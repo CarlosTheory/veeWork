@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { registerLocaleData } from '@angular/common';
+import es from '@angular/common/locales/es';
+
 
 /**
  * Generated class for the CalculatorPage page.
@@ -18,13 +21,13 @@ export class CalculatorPage {
 	public adicional:number = 0.30;
 	private calcParaRecibir:any = {
 		recibir: "",
-		enviar: 0,
-		comision:0
+		enviar: "",
+		comision:""
 	}
 	private calcParaEnviar:any = {
-		recibir: 0,
+		recibir: "",
 		enviar: "",
-		comision:0
+		comision:""
 	}
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
@@ -32,6 +35,10 @@ export class CalculatorPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CalculatorPage');
+  }
+
+  ngOnInit(){
+  	registerLocaleData( es );
   }
 
   calcularEnvio(){
