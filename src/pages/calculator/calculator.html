@@ -6,41 +6,72 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>Calculadora</ion-title>
+    <vee-work-header></vee-work-header>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 	<!-- CalcularParaRecibir -->
-	<div>
-		<h1>Calcular para recibir</h1>
-		<ion-item>
-			<ion-label>Para recibir:</ion-label>
-			<ion-input type="text" [(ngModel)]="calcParaRecibir.recibir" [value]="calcParaRecibir.recibir" (ionChange)="calcularRecibo()"></ion-input>
-		</ion-item>
-		<ion-item>
-			<ion-label>La comisión es:</ion-label>
-			<ion-input type="text" [(ngModel)]="calcParaRecibir.comision" [value]="calcParaRecibir.comision"></ion-input>
-		</ion-item>
-		<ion-item>
-			<ion-label>Se deben enviar:</ion-label>
-			<ion-input type="text" [(ngModel)]="calcParaRecibir.enviar" [value]="calcParaRecibir.enviar"></ion-input>
-		</ion-item>
-	</div>
+	<ion-card class="space-section">
+		<div>
+			<h1 class="veeWork-title" text-center>Calcular para recibir</h1>
+			<ion-item>
+				<ion-label stacked>Para recibir:</ion-label>
+				<span item-left><ion-icon class="usd" name="logo-usd"></ion-icon></span>
+				<ion-input  step="0.01" type="number" [(ngModel)]="calcParaRecibir.recibir" [value]="calcParaRecibir.recibir" (ionChange)="calcularRecibo()"></ion-input>
+				<ion-buttons class="input-buttons" item-right>
+					<button class="input-button" ion-button color="dark" (click)="hola()"><ion-icon name="copy"></ion-icon></button>
+					<button class="input-button" ion-button color="dark" (click)="hola()"><ion-icon name="close-circle"></ion-icon></button>
+				</ion-buttons>
+			</ion-item>
+			<ion-item>
+				<ion-label stacked>La comisión es:</ion-label>
+				<span item-left><ion-icon class="usd" name="logo-usd"></ion-icon></span>
+				<ion-input  step="0.01" readonly type="number" [(ngModel)]="calcParaRecibir.comision" [value]="calcParaRecibir.comision"></ion-input>
+				<ion-buttons class="input-buttons" item-right>
+					<button class="input-button" ion-button color="dark" (click)="hola()"><ion-icon name="copy"></ion-icon></button>
+				</ion-buttons>
+			</ion-item>
+			<ion-item>
+				<ion-label stacked>Se deben enviar:</ion-label>
+				<span item-left><ion-icon class="usd" name="logo-usd"></ion-icon></span>
+				<ion-input  step="0.01" readonly type="number" [(ngModel)]="calcParaRecibir.enviar" [value]="calcParaRecibir.enviar"></ion-input>
+				<ion-buttons class="input-buttons" item-right>
+					<button class="input-button" ion-button color="dark" (click)="hola()"><ion-icon name="copy"></ion-icon></button>
+				</ion-buttons>
+				<button clear slot="end">Forgot</button>
+			</ion-item>
+		</div>
+	</ion-card>
 	<!-- CalcularParaEnviar -->
-	<div>
-		<h1>Calcular para enviar</h1>
-		<ion-item>
-			<ion-label>Si envias:</ion-label>
-			<ion-input type="text" [(ngModel)]="calcParaEnviar.enviar" [value]="calcParaEnviar.enviar" (ionChange)="calcularEnvio()"></ion-input>
-		</ion-item>
-		<ion-item>
-			<ion-label>La comisión es:</ion-label>
-			<ion-input type="text" [(ngModel)]="calcParaEnviar.comision" [value]="calcParaEnviar.comision"></ion-input>
-		</ion-item>
-		<ion-item>
-			<ion-label>Se reciben:</ion-label>
-			<ion-input type="text" [(ngModel)]="calcParaEnviar.recibir" [value]="calcParaEnviar.recibir"></ion-input>
-		</ion-item>
-	</div>
+	<ion-card class="space-section">
+		<div>
+			<h1 class="veeWork-title" text-center>Calcular para enviar</h1>
+			<ion-item>
+				<ion-label stacked>Si envias:</ion-label>
+				<span item-left><ion-icon class="usd" name="logo-usd"></ion-icon></span>
+				<ion-input  step="0.01" type="number" [(ngModel)]="calcParaEnviar.enviar" [value]="calcParaEnviar.enviar" (ionChange)="calcularEnvio()"></ion-input>
+				<ion-buttons class="input-buttons" item-right>
+					<button class="input-button" ion-button color="dark" (click)="hola()"><ion-icon name="copy"></ion-icon></button>
+					<button class="input-button" ion-button color="dark" (click)="hola()"><ion-icon name="close-circle"></ion-icon></button>
+				</ion-buttons>
+			</ion-item>
+			<ion-item>
+				<ion-label stacked>La comisión es:</ion-label>
+				<span item-left><ion-icon class="usd" name="logo-usd"></ion-icon></span>
+				<ion-input  step="0.01" readonly type="number" [(ngModel)]="calcParaEnviar.comision" [value]="calcParaEnviar.comision"></ion-input>
+				<ion-buttons class="input-buttons" item-right>
+					<button class="input-button" ion-button color="dark" (click)="hola()"><ion-icon name="copy"></ion-icon></button>
+				</ion-buttons>
+			</ion-item>
+			<ion-item>
+				<ion-label stacked>Se reciben:</ion-label>
+				<span item-left><ion-icon class="usd" name="logo-usd"></ion-icon></span>
+				<ion-input step="0.01" readonly type="number" [(ngModel)]="calcParaEnviar.recibir" [value]="calcParaEnviar.recibir"></ion-input>
+				<ion-buttons class="input-buttons" item-right>
+					<button class="input-button" ion-button color="dark" (click)="hola()"><ion-icon name="copy"></ion-icon></button>
+				</ion-buttons>
+			</ion-item>
+		</div>
+	</ion-card>
 </ion-content>
