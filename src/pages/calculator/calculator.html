@@ -20,8 +20,8 @@
 				<span item-left><ion-icon class="usd" name="logo-usd"></ion-icon></span>
 				<ion-input  step="0.01" type="number" [(ngModel)]="calcParaRecibir.recibir" [value]="calcParaRecibir.recibir" (ionChange)="calcularRecibo()"></ion-input>
 				<ion-buttons class="input-buttons" item-right>
-					<button class="input-button" ion-button color="dark" (click)="hola()"><ion-icon name="copy"></ion-icon></button>
-					<button class="input-button" ion-button color="dark" (click)="hola()"><ion-icon name="close-circle"></ion-icon></button>
+<!-- 					<button class="input-button" ion-button color="dark" (click)="copyAmount('Para recibir:', calcParaRecibir.recibir)"><ion-icon name="copy"></ion-icon></button> -->
+					<button class="input-button" ion-button color="dark" (click)="cleanInput('recibir')"><ion-icon name="close-circle"></ion-icon></button>
 				</ion-buttons>
 			</ion-item>
 			<ion-item>
@@ -29,7 +29,7 @@
 				<span item-left><ion-icon class="usd" name="logo-usd"></ion-icon></span>
 				<ion-input  step="0.01" readonly type="number" [(ngModel)]="calcParaRecibir.comision" [value]="calcParaRecibir.comision"></ion-input>
 				<ion-buttons class="input-buttons" item-right>
-					<button class="input-button" ion-button color="dark" (click)="hola()"><ion-icon name="copy"></ion-icon></button>
+					<button class="input-button" ion-button color="dark" (click)="copyAmount('La comisión es:', calcParaRecibir.comision)"><ion-icon name="copy"></ion-icon></button>
 				</ion-buttons>
 			</ion-item>
 			<ion-item>
@@ -37,7 +37,7 @@
 				<span item-left><ion-icon class="usd" name="logo-usd"></ion-icon></span>
 				<ion-input  step="0.01" readonly type="number" [(ngModel)]="calcParaRecibir.enviar" [value]="calcParaRecibir.enviar"></ion-input>
 				<ion-buttons class="input-buttons" item-right>
-					<button class="input-button" ion-button color="dark" (click)="hola()"><ion-icon name="copy"></ion-icon></button>
+					<button class="input-button" ion-button color="dark" (click)="copyAmount('Se deben enviar:', calcParaRecibir.enviar)"><ion-icon name="copy"></ion-icon></button>
 				</ion-buttons>
 				<button clear slot="end">Forgot</button>
 			</ion-item>
@@ -52,8 +52,8 @@
 				<span item-left><ion-icon class="usd" name="logo-usd"></ion-icon></span>
 				<ion-input  step="0.01" type="number" [(ngModel)]="calcParaEnviar.enviar" [value]="calcParaEnviar.enviar" (ionChange)="calcularEnvio()"></ion-input>
 				<ion-buttons class="input-buttons" item-right>
-					<button class="input-button" ion-button color="dark" (click)="hola()"><ion-icon name="copy"></ion-icon></button>
-					<button class="input-button" ion-button color="dark" (click)="hola()"><ion-icon name="close-circle"></ion-icon></button>
+<!-- 					<button class="input-button" ion-button color="dark" (click)="copyAmount('Si envias:', calcParaEnviar.enviar)"><ion-icon name="copy"></ion-icon></button> -->
+					<button class="input-button" ion-button color="dark" (click)="cleanInput('enviar')"><ion-icon name="close-circle"></ion-icon></button>
 				</ion-buttons>
 			</ion-item>
 			<ion-item>
@@ -61,7 +61,7 @@
 				<span item-left><ion-icon class="usd" name="logo-usd"></ion-icon></span>
 				<ion-input  step="0.01" readonly type="number" [(ngModel)]="calcParaEnviar.comision" [value]="calcParaEnviar.comision"></ion-input>
 				<ion-buttons class="input-buttons" item-right>
-					<button class="input-button" ion-button color="dark" (click)="hola()"><ion-icon name="copy"></ion-icon></button>
+					<button class="input-button" ion-button color="dark" (click)="copyAmount('La comisión es:', calcParaEnviar.comision)"><ion-icon name="copy"></ion-icon></button>
 				</ion-buttons>
 			</ion-item>
 			<ion-item>
@@ -69,7 +69,7 @@
 				<span item-left><ion-icon class="usd" name="logo-usd"></ion-icon></span>
 				<ion-input step="0.01" readonly type="number" [(ngModel)]="calcParaEnviar.recibir" [value]="calcParaEnviar.recibir"></ion-input>
 				<ion-buttons class="input-buttons" item-right>
-					<button class="input-button" ion-button color="dark" (click)="hola()"><ion-icon name="copy"></ion-icon></button>
+					<button class="input-button" ion-button color="dark" (click)="copyAmount('Se reciben:', calcParaEnviar.recibir)"><ion-icon name="copy"></ion-icon></button>
 				</ion-buttons>
 			</ion-item>
 		</div>
