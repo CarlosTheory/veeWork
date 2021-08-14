@@ -4,6 +4,7 @@ import { registerLocaleData } from '@angular/common';
 import es from '@angular/common/locales/es';
 import { Clipboard } from '@ionic-native/clipboard';
 import { Toast } from '@ionic-native/toast';
+import { AboutPage } from '../about/about';
 
 
 
@@ -127,6 +128,11 @@ export class CalculatorPage {
           console.log("sino");
       }
     }*/
+  }
+
+  goToAbout(){
+    console.log("about");
+    this.navCtrl.push(AboutPage);
   }
 
 }

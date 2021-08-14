@@ -13,6 +13,7 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { PricesPage } from '../pages/prices/prices';
 import { CalculatorPage } from '../pages/calculator/calculator';
+import { AboutPage } from '../pages/about/about';
 
 
 
@@ -22,7 +23,8 @@ import { CalculatorPage } from '../pages/calculator/calculator';
     HomePage,
     TabsPage,
     PricesPage,
-    CalculatorPage
+    CalculatorPage,
+    AboutPage
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,8 @@ import { CalculatorPage } from '../pages/calculator/calculator';
     HomePage,
     TabsPage,
     PricesPage,
-    CalculatorPage
+    CalculatorPage,
+    AboutPage
   ],
   providers: [
     StatusBar,
